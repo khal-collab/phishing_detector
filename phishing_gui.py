@@ -1,3 +1,4 @@
+import os
 from bs4 import BeautifulSoup
 from email import policy
 from email.parser import BytesParser
@@ -6,8 +7,10 @@ from tkinter import filedialog, messagebox, scrolledtext
 import joblib
 
 # --------- LOAD MODEL & VECTORIZER ----------
-MODEL_PATH = r"C:\Users\ADMIN\OneDrive\Desktop\phisingproject\Data\spamassassin\phishing_model.pkl"
-VEC_PATH = r"C:\Users\ADMIN\OneDrive\Desktop\phisingproject\Data\spamassassin\vectorizer.pkl"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "Models", "phishing_model.pkl")
+VEC_PATH = os.path.join(BASE_DIR, "Models", "vectorizer.pkl")
 
 try:
     model = joblib.load(MODEL_PATH)
