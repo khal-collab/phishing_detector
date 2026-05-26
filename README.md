@@ -102,7 +102,11 @@ python phishing_gui.py
 
 ## 🖼️ Screenshot
 
-> *(Add a screenshot of the GUI here)*
+> ### ✅ Legitimate Email (HAM)
+![HAM Result](docs/Screenshot%20(62).png)
+
+### 🚨 Phishing Email (SPAM)
+![SPAM Result](docs/Screenshot%20(63).png)
 
 ---
 
